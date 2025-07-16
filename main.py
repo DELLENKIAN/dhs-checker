@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_file
 import os
 import pandas as pd
-from dhs_checker_script import check_dhs_status  # This must be your working DHS scraper
+from dhs_checker_script import check_id_status  # This must be your working DHS scraper
 import uuid
 
 app = Flask(__name__)
