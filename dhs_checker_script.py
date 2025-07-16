@@ -2,7 +2,7 @@ import csv
 import sys
 from playwright.sync_api import sync_playwright
 
-def check_id_status(id_number):
+def check_dhs_status(id_number):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()

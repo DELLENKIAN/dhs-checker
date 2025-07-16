@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, send_file
 import os
 import pandas as pd
-from dhs_checker_script import check_id_status  # This must be your working DHS scraper
+from dhs_checker_script import check_id_status as check_dhs_status
+  # This must be your working DHS scraper
 import uuid
 
 app = Flask(__name__)
@@ -36,4 +37,5 @@ def upload():
     return send_file(output_filename, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+
