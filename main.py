@@ -18,7 +18,11 @@ def upload():
         return "No file uploaded."
 
     df = pd.read_csv(file)
-    results = []
+print("COLUMNS IN UPLOADED FILE:", df.columns.tolist())  # ADD THIS LINE
+
+for id_number in df['ID Number']:
+    ...
+
 
     for id_number in df['ID Number']:
         status, counsellor = check_dhs_status(id_number)
