@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DHS Checker</title>
+    <title>DHS Checker Upload</title>
 </head>
 <body>
-  <h1>Upload RSA ID CSV</h1>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" accept=".csv" required>
-    <button type="submit">Upload & Check</button>
-  </form>
+    <h1>Upload CSV of RSA ID Numbers</h1>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
