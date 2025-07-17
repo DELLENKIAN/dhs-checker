@@ -13,8 +13,6 @@ def upload():
     file = request.files['file']
     df = pd.read_csv(file)
 
-    print("COLUMNS IN UPLOADED FILE:", df.columns.tolist())  # Debugging line
-
     results = []
     for id_number in df['ID Number']:
         status, counsellor = check_dhs_status(str(id_number))
